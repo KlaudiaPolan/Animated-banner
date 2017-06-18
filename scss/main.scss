@@ -1,0 +1,302 @@
+@import "reset";
+
+.container{
+  margin: 0 auto;
+  width: 800px;
+  height: 600px;
+  position: relative;
+}
+
+.container>*{
+  position: absolute;
+  top: -100px;
+  width: 100%;
+}
+
+.figure{
+  background-image: url("../images/sprite.png");
+  width: 100px;
+  height: 100px;
+  float: right;
+}
+@keyframes figureColor1 {
+  0%{
+    background-position: 300px 100px;
+  }
+  100%{ 
+    background-position: 300px 200px;
+  }
+}
+@keyframes figureColor2 {
+  0%{
+    background-position: 0px 100px;
+  }
+  100%{
+    background-position: 0 0;
+  }
+}
+@keyframes figureColor3 {
+  0%{
+    background-position: 200px 100px;
+  }
+  100%{
+    background-position: 200px 0;
+  }
+}
+@keyframes figureColor4 {
+  0%{
+    background-position: 100px 300px;
+  }
+  100%{
+    background-position: 500px 200px;
+  }
+}
+@keyframes figurePosition {
+  0%{
+    margin-right: 0;
+  }
+  100%{
+    margin-right: -100px;
+  }
+}
+@keyframes rotateLeft{
+  100%{
+    transform: rotate(-360deg);
+  }
+}
+@keyframes rotateRight {
+  100%{
+    transform: rotate(360deg);
+  }
+}
+#firstElement .figure{
+  background-position: 300px 100px;
+  animation: figurePosition, figureColor1, rotateLeft;
+  animation-duration: 2s, 0.5ms, 5s;
+  animation-delay: 8s, 12s, 14s;
+  animation-fill-mode: forwards;
+}
+#secondElement .figure{
+  background-position: 0 100px;
+  animation: figurePosition, figureColor2, rotateRight;
+  animation-duration: 2s, 0.5ms, 5s;
+  animation-delay: 9s, 12.5s, 14s;
+  animation-fill-mode: forwards;
+}
+#thirdElement .figure{
+  background-position: 200px 100px;
+  animation: figurePosition, figureColor3, rotateLeft;
+  animation-duration: 2s, 0.5ms, 5s;
+  animation-delay: 10s, 13s, 14s;
+  animation-fill-mode: forwards;
+}
+#forthElement .figure{
+  background-position: 100px 100px;
+  animation: figurePosition, figureColor4, rotateRight;
+  animation-duration: 2s, 0.5ms,5s;
+  animation-delay: 11s, 13.5s, 14s;
+  animation-fill-mode: forwards;
+}
+@keyframes textPosition {
+  0%{
+    margin-left: 0;
+  }
+  100%{
+    margin-left: -100px;
+  }
+}
+#firstElement .text{
+  animation: textPosition;
+  animation-duration: 2s;
+  animation-delay: 8s;
+  animation-fill-mode: forwards;
+}
+#secondElement .text{
+  animation: textPosition;
+  animation-duration: 2s;
+  animation-delay: 9s;
+  animation-fill-mode: forwards;
+}
+#thirdElement .text{
+  animation: textPosition;
+  animation-duration: 2s;
+  animation-delay: 10s;
+  animation-fill-mode: forwards;
+}
+#forthElement .text{
+  animation: textPosition;
+  animation-duration: 2s;
+  animation-delay: 11s;
+  animation-fill-mode: forwards;
+}
+.text{
+  float: left;
+  font-family: arial,sans-serif;
+  font-size: 60px;
+  line-height: 100px;
+}
+@keyframes firstElementPosition1 {
+  0%{
+    top: -100px;
+    left: 0;
+  }
+  100%{
+    top: 20px;
+    left: 0;
+  }
+}
+@keyframes moveRight {
+  0%{
+    right: 0;
+  }
+  100%{
+    transform: translate(100vw);
+  }
+}
+@keyframes moveLeft {
+  0%{
+    left: 0;
+  }
+  100%{
+    left: -100vw;
+  }
+}
+#firstElement{
+  animation: firstElementPosition1,moveLeft;
+  animation-duration: 2s, 5s;
+  animation-delay: 2s, 14s;
+  animation-fill-mode: forwards;
+}
+@keyframes secondElementPosition1 {
+  0%{
+    top: -100px;
+    left: 0;
+  }
+  100%{
+    top: 140px;
+    left: 0;
+  }
+}
+#secondElement{
+  animation: secondElementPosition1, moveRight;
+  animation-duration: 2s, 5s;
+  animation-delay: 3s, 14s;
+  animation-fill-mode: forwards;
+}
+@keyframes thirdElementPosition1 {
+  0%{
+    top: -100px;
+    left: 0;
+  }
+  100%{
+    top: 260px;
+    left: 0;
+  }
+}
+#thirdElement{
+  animation: thirdElementPosition1, moveLeft;
+  animation-duration: 2s, 5s;
+  animation-delay: 4s, 14s;
+  animation-fill-mode: forwards;
+}
+@keyframes forthElementPosition1 {
+  0%{
+    top: -100px;
+    left: 0;
+  }
+  100%{
+    top: 380px;
+    left: 0;
+  }
+}
+#forthElement{
+  animation: forthElementPosition1, moveRight;
+  animation-duration: 2s, 5s;
+  animation-delay: 6s, 14s;
+  animation-fill-mode: forwards;
+}
+@keyframes textScale {
+  0%{
+    opacity: 0;
+    transform: scale(0);
+  }
+  100%{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes rollAnimation1 {
+  0%{
+    top: -40px;
+    left: -10%;
+  }
+  100%{
+    top: 260px;
+    left: -10%;
+  }
+}
+@keyframes rollAnimation2 {
+  0%{
+    left:-10%;
+  }
+  100%{
+    left: 33%;
+  }
+}
+
+@keyframes rotatepX {
+  100%{
+    transform: rotateX(360deg);
+  }
+}
+
+@keyframes textHide {
+  0%{
+    opacity: 1;
+    transform: scaleX(1);
+  }
+  100%{
+    opacity: 0;
+    transform: scaleX(0);
+  }
+}
+
+
+.container p{
+  position: absolute;
+  text-align: center;
+  font-family: arial,sans-serif;
+  font-size: 40px;
+  animation: textHide;
+  animation-duration: 2s;
+  animation-delay: 23s;
+  animation-fill-mode: forwards;
+}
+#bar{
+  top:200px;
+
+}
+#cheesecake{
+  top: 340px;
+
+}
+#cheesecake, #bar{
+  opacity: 0;
+  animation: textScale,rotatepX,textHide;
+  animation-duration: 2s,2s,2s;
+  animation-delay: 17s,21s,23s;
+  animation-fill-mode: forwards;
+}
+
+#roll{
+  top: -100px;
+  border: 2px solid black;
+  padding: 5px;
+  width: 280px;
+  margin: 0 auto;
+
+  animation: rollAnimation1,rollAnimation2,rotatepX,textHide;
+  animation-duration: 2s,2s,2s,2s;
+  animation-delay: 17s,19s,21s,23s;
+  animation-fill-mode: forwards;
+}
